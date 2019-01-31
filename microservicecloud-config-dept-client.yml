@@ -1,0 +1,56 @@
+﻿spring:
+  profiles:
+    active: dev
+
+---
+
+server:
+  port: 8001
+
+    
+spring:
+   profiles: dev
+   application:
+    name: microservicecloud-config-dept-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+    register-with-eureka: true
+    fetch-registry: false
+  instance:
+    instance-id: serice_provider_8001_Hystrix
+    prefer-ip-address: true
+
+
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.atguigu.com
+
+
+---
+
+server:
+  port: 8001
+
+    
+spring:
+   profiles: test
+   application:
+    name: microservicecloud-config-dept-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+    register-with-eureka: true
+    fetch-registry: false
+  instance:
+    instance-id: serice_provider_8001_Hystrix
+    prefer-ip-address: true
+
+
+info:
+  app.name: atguigu-microservicecloud-zy
+  company.name: www.atguigu.comzy
